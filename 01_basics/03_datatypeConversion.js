@@ -13,3 +13,11 @@ console.log(typeof valinnum);
 
 if(valinnum===Number) console.log("true");
 else console.log("false");
+
+let counter = 4;
+console.log(counter);
+let inc = ++counter;
+console.log(inc);
+console.log(counter);
+
+

@@ -22,5 +22,22 @@
     }
  }
 xhr.send()
+
+const xhrimg = new XMLHttpRequest();
+xhrimg.open('GET',requestURL)
+xhrimg.onreadystatechange=function(){
+    console.log(xhrimg.readyState);
+
+    if(xhrimg.readyState===4){
+        const dataf = JSON.parse(this.responseText);
+        const dataname=JSON.parse(this.responseText);
+        
+        console.log(`${dataf.following} this is following`);
+        console.log(`${dataname.public_repos} this is public repos`);
+    }
+    
+}
+xhrimg.send();
+
 </script>
 </html>

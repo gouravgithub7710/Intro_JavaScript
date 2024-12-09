@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Friend</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="first mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+        <div class="cart p-6">
+        <div class="img flex justify-center"><img class=" w-32 h-32 object-cover rounded-full border-4 border-blue-500" src="https://t4.ftcdn.net/jpg/06/47/16/33/360_F_647163318_R7upZlv1ptm71jbTYQtaqi5YCqHJGTRn.jpg" alt=""></div>
+        <h2 class="text-xl font-bold text-center text-gray-700 mt-4">Angel Priya</h2>
+        <h3 class="text-center text-red-500 text-lg font-bold">Stranger</h3>
+        <div class="button button flex justify-between mt-6 gap-3 ">
+            <div class="button1 button1 bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600 transition cursor-pointer">Remove</div>
+            <div class="button2 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition cursor-pointer">Add Friend</div>
+        </div>
+        </div>
+    </div>
+</body>
+<script>
+    const addFri = document.querySelector('.button2').addEventListener('click',function(){
+        
+        const Stranger = document.querySelector('h3').textContent = "Friend";
+        const FriendColr = document.querySelector('h3') .style.color = "blue";
+    })
+
+    const removeFri =document.querySelector('.button1').addEventListener('click',function(){
+        
+        const friend = document.querySelector('h3').textContent = "Stranger";
+        const StrangerColr = document.querySelector('h3') .style.color = "red";
+    })
+</script>
+</html>

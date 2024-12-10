@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex bg-blue-500 h-screen items-center justify-center">
+    <div id="container" class="h-[400px] w-[350px] bg-white rounded-[10px] relative overflow-hidden">
+        <img class="h-[100%] w-[100%]  object-cover object-top" src="https://i.pinimg.com/originals/36/75/d4/3675d4a77f44c0f4dd57be1ec8b8af41.jpg" alt="">
+        <i class="absolute ri-heart-3-fill  text-[75px] text-white absolute top-1/2 left-1/2 transform translate-x-[-50%] translate-y-[-50%] scale-0 opacity-0 transition-transform ease-linear"></i>
+    </div>
+</body>
+
+<script>
+   var con=document.querySelector('#container')
+   var love=document.querySelector('i')
+
+   con.addEventListener('dblclick',function(){
+    love.classList.toggle('scale-100');
+    love.style.opacity = "0.8";
+    
+    setTimeout(function(){
+        love.style.opacity = "0";
+    }, 1000);
+
+    setTimeout(function(){
+        love.classList.toggle('scale-0');
+    }, 2000);
+   });
+   
+    
+</script>
+</html>

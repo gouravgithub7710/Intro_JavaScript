@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="output.css"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-pink-500">
+   <div class="main text-center">
+    <h1 class="counter text-5xl font-medium bg-slate-300">Counter</h1>
+    <h1 class="w-full h-px bg-purple-700"></h1>
+    <br>
+    <h1 class="count font-bold text-5xl">0</h1>
+    <div class="buttons flex justify-self-center  gap-1 py-5 text-2xl">
+        <button class="btn1 border border-gray-500  justify-self-center w-[50px] h-[50px] rounded-lg font-bold text-zinc-50 bg-purple-700 items-center justify-center ">-</button>
+        <button class="btn2 border border-gray-500 justify-self-center w-[50px] h-[50px] rounded-lg font-bold text-zinc-50 bg-purple-700 items-center justify-center">+</button>
+    </div>
+    <div class="input flex items-center justify-center">
+        <h3 class="text-lg font-medium">Increment/Decrement by:</h3>
+        <form><input class=" input w-[5rem] h-[2rem] px-2 text-base rounded border-black-600" value="1" type="text"></form>
+    </div>
+
+    <button class="btn3 border border-gray-500 justify-self-center w-[90px] h-[40px] m-2 rounded-lg font-bold text-zinc-50 bg-purple-700 items-center justify-center">Reset</button>
+   </div>
+</body>
+
+<script>
+    let count =0;
+    const incrdec=document.querySelector('.input input')
+    const btn1=document.querySelector('.btn1')
+    btn1.addEventListener('click',function(){
+    const incdec = parseInt(incrdec.value);
+       count=count-incdec; // Decrease the count
+    document.querySelector('.count').innerHTML = count; // Update the button text
+    })
+    const btn2=document.querySelector('.btn2')
+    btn2.addEventListener('click',function(){
+        const incdec = parseInt(incrdec.value);
+        count=count+incdec; 
+    document.querySelector('.count').innerHTML = count; 
+    })
+
+    const btn3 = document.querySelector('.btn3')
+    btn3.addEventListener('click',function(){
+        document.querySelector('.count').innerHTML =0;
+        count=0;
+    });
+</script>
+</html>
